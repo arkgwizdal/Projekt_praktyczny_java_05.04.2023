@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.DriverAction;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.Scanner;
 
 public class Main {
 
@@ -21,11 +22,54 @@ public class Main {
                 System.getenv(BD_USER_ENV),System.getenv(DB_PASSWORD_ENV))){
             DbInitializer dbInitializer = new  DbInitializer(connection);
             dbInitializer.initDb();
-            System.out.println("Well done !!!");
+            System.out.println("msql is connected and initialized propery ");
+        }
+        final  Scanner scanner =  new Scanner(System.in);
+
+        while (true){
+            System.out.println("What you can do :");
+            System.out.println("0 - Exit program ");
+            System.out.println("1 - Add new expences  ");
+            System.out.println("2 - Add new income ");
+            System.out.println("3 - Delete expences ");
+            System.out.println("4 - Delete income");
+            System.out.println("5 - Show all expences & income ");
+            System.out.println("6 - Show all expences ");
+            System.out.println("7 - Show expences by date ");
+            System.out.println("8 - Show expences by category ");
+            System.out.println("9 - Show sum of expences and quantity in cattegory ");
+            System.out.println("10 - Show all income");
+            System.out.println("11 - Show balance");
+            System.out.println("12 - Add new cattegory");
+            System.out.println("13 - Delete cattegory");
+
+            int option = scanner.nextInt();
+            switch (option) {
+                case 0 -> {
+                    System.exit(0);
+                }
+                case 1 -> {
+
+                }
+                case 2 -> {
+
+                }
+                case 12 -> {
+                    System.out.println("Adding new cattegory.");
+                    System.out.println("Write name of new cattegory:");
+                    String cattegoryName =  scanner.nextLine();
+                }
+                case 13 -> {
+                    System.out.println("Delete cattegory : ");
+                    String cattegoryName =  scanner.nextLine();
+                }
+
+
+            }
+
         }
 
-
     }
 
 
-    }
+}

@@ -20,6 +20,7 @@ public class DbInitializer {
            executeSqlFromeResources(incoms);
            executeSqlFromeResources(categorys);
            executeSqlFromeResources(expenses);
+            System.out.println("inicjalizacja powiodła się");
 
         }
 
@@ -33,6 +34,7 @@ public class DbInitializer {
         }
         String sql = new String(inputStream.readAllBytes());
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.execute();
     }
 
 }
