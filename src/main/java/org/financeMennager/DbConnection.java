@@ -8,7 +8,7 @@ import org.hibernate.type.internal.UserTypeSqlTypeAdapter;
 public class DbConnection {
 
     private static final EntityManagerFactory entityMennagerFactory = Persistence.
-            createEntityManagerFactory("finance-mennager");
+            createEntityManagerFactory("finance-menager");
 
     public static EntityManager getEntityMennager(){
         return entityMennagerFactory.createEntityManager();

@@ -1,6 +1,7 @@
 package org.financeMennager;
 
 import jakarta.persistence.EntityManager;
+import org.financeMennager.entity.Category;
 import org.financeMennager.service.CattegoryService;
 
 import java.io.IOException;
@@ -27,6 +28,8 @@ public class Main {
             DbInitializer dbInitializer = new  DbInitializer(connection);
             dbInitializer.initDb();
             EntityManager entityManager = DbConnection.getEntityMennager();
+
+            Category category = entityManager.find(Category.class, 1L);
 
             System.out.println("msql is connected and initialized propery ");
         }
