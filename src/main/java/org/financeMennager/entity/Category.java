@@ -24,7 +24,6 @@ public class Category {
     @OneToMany(mappedBy = "category")
     private Set<Expenses> expenses ;
 
-
     public void setCategoryName(String categoryName) {
         this.categoryName = categoryName;
     }
